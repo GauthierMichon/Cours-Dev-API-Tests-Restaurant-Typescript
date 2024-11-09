@@ -2,6 +2,8 @@ const express = require("express");
 import * as dotenv from "dotenv";
 import { initDB } from "./database/database";
 import clientRoutes from "./routes/clientRoutes";
+import employeRoutes from "./routes/employeRoutes";
+import reservationRoutes from "./routes/reservationRoutes";
 
 dotenv.config();
 const app = express();
@@ -11,6 +13,8 @@ app.use(express.json());
 
 // Routes
 app.use("/api/clients", clientRoutes);
+app.use("/api/employes", employeRoutes);
+app.use("/api/reservations", reservationRoutes);
 
 const startServer = async () => {
   try {
