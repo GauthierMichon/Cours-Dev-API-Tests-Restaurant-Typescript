@@ -11,11 +11,9 @@ export const getCommandeDetails = async (req: Request, res: Response) => {
     );
     res.status(200).json(details);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        error: "Erreur lors de la récupération des détails de commande",
-      });
+    res.status(500).json({
+      error: "Erreur lors de la récupération des détails de commande",
+    });
   } finally {
     db.close();
   }
@@ -50,14 +48,12 @@ export const createCommandeDetail = async (req: Request, res: Response) => {
       `INSERT INTO Commande_Details (commande_id, plat_id, quantite) VALUES (?, ?, ?)`,
       [commande_id, plat_id, quantite]
     );
-    res
-      .status(201)
-      .json({
-        commande_detail_id: result.lastID,
-        commande_id,
-        plat_id,
-        quantite,
-      });
+    res.status(201).json({
+      commande_detail_id: result.lastID,
+      commande_id,
+      plat_id,
+      quantite,
+    });
   } catch (error) {
     res
       .status(500)

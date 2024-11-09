@@ -4,6 +4,10 @@ import { initDB } from "./database/database";
 import clientRoutes from "./routes/clientRoutes";
 import employeRoutes from "./routes/employeRoutes";
 import reservationRoutes from "./routes/reservationRoutes";
+import commandeDetailRoutes from "./routes/commandeDetailRoutes";
+import menuRoutes from "./routes/menuRoutes";
+import tableRoutes from "./routes/tableRoutes";
+import commandeRoutes from "./routes/commandeRoutes";
 
 dotenv.config();
 const app = express();
@@ -15,6 +19,10 @@ app.use(express.json());
 app.use("/api/clients", clientRoutes);
 app.use("/api/employes", employeRoutes);
 app.use("/api/reservations", reservationRoutes);
+app.use("/api/commandeDetails", commandeDetailRoutes);
+app.use("/api/menus", menuRoutes);
+app.use("/api/tables", tableRoutes);
+app.use("/api/commanded", commandeRoutes);
 
 const startServer = async () => {
   try {
