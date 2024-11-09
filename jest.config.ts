@@ -1,7 +1,10 @@
 export default {
-  preset: "ts-jest", // Utilise ts-jest pour transpiler TypeScript
-  testEnvironment: "node", // Utilise l'environnement de test pour Node.js
-  roots: ["<rootDir>/src"], // Dossier source pour les tests
-  testMatch: ["**/__tests__/**/*.(ts|js)", "**/?(*.)+(spec|test).(ts|js)"], // Les fichiers de tests
+  preset: "ts-jest",
+  testEnvironment: "node",
+  roots: ["<rootDir>/src"],
+  testMatch: ["**/__tests__/**/*.(ts|js)", "**/?(*.)+(spec|test).(ts|js)"],
   moduleFileExtensions: ["ts", "js"],
+  moduleNameMapper: {
+    "^../database/database$": "<rootDir>/src/database/__mocks__/database.ts", // Mappage vers le mock correct
+  },
 };

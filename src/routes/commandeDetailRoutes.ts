@@ -6,7 +6,7 @@ import {
   createCommandeDetail,
   updateCommandeDetail,
   deleteCommandeDetail,
-} from "../controllers/commandeDetailsController";
+} from "../controllers/commandeDetailController";
 
 const router = express.Router();
 
