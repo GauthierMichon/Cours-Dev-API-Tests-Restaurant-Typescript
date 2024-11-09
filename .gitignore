@@ -39,7 +39,7 @@ Thumbs.db
 dist/**/*
 
 # Ignore database
-src/databse/restaurant.db
+src/database/restaurant.db
 
 # ignore .lock
 yarn.lock
