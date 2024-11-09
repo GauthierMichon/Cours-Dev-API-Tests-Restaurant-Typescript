@@ -38,6 +38,9 @@ Thumbs.db
 # Ignore built ts files
 dist/**/*
 
+# Ignore database
+src/databse/restaurant.db
+
 # ignore .lock
 yarn.lock
 package.lock
